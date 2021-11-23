@@ -1,0 +1,332 @@
+@use "variables";
+
+// @font-face { font-family: Hobo Std; src: resources/('HoboStd.otf'); } 
+
+
+body {
+    background-color: variables.$backgroundColor;
+    margin-top: 0%;
+    margin-bottom: 0px;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+ //Hero Images, Company name (commented out; must be visible only on home page)
+ .heroImageTextDiv {
+    height: 100%;
+    width:100%;
+    position: relative;
+}
+    .heroHumansImage {
+        background: transparent !important;
+        background-color: transparent !important;
+        height: auto;
+        width: 43%;
+        z-index: 3;
+        position: absolute;
+        top:2%;
+        left:28.5%;
+    }
+
+    .heroSkyImageDiv {
+        width: 85%;
+        height: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+        .heroSkyImageDiv img {
+            width: 100%;
+            height: 100%;
+        }
+
+    .up, .in, .the, .air {
+        font-family: variables.$font-title;
+        color: white;
+        position: absolute;
+        text-shadow: variables.$text-shadow-title;
+    }
+    .up{
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        font-size: 9.5vw;
+        top:0.3%;
+        left:21%;
+        z-index: 2;
+    }
+    .in{
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        font-size: 5.8vw;
+        top:7.5%;
+        left:36%;
+        z-index: 2;
+    }
+    .the{
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        font-size: 5.8vw;
+        top:0.3%;
+        left:44.8%;
+        z-index: 2;
+    }
+    .air{
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        font-size: 9.5vw;
+        top:0.3%;
+        left:58.7%;
+        z-index: 2;
+    }
+    .events {
+        font-family: variables.$font-text;
+        color: white;
+        font-size: 1.3vw;
+        font-weight: 500;
+        position: absolute;
+        top:45.2%;
+        left:76%;
+        z-index: 20;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        text-shadow: variables.$text-shadow-title;
+    }
+//End of Hero Images, Company name
+
+
+//wrapper
+.wrapper {
+    margin-top: 0%;
+    margin-bottom: 0px;
+    margin-left: 22%;
+    margin-right: 22%;
+}
+    //Menu
+    .menuDiv {
+        margin-top: 10%;
+        display:flex;
+        justify-content: center;
+        align-content: center;
+        gap: 15px 30px;
+        flex-wrap: wrap;
+    }
+        .menuItems {
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+        }
+        .menuItems.active {
+            font-family: variables.$font-text;
+            color: white;
+            font-size: 12pt;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            cursor: pointer;
+            text-shadow: variables.$text-shadow-title;
+        }
+        .menuItems.inactive {
+            font-family: variables.$font-text;
+            color: white;
+            font-size: 12pt;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            cursor:default;
+            text-shadow: variables.$text-shadow-title;
+        }
+        .menuItems.active::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 1px;
+            background: white;
+            transition: width .3s;
+        }
+        .menuItems.active:hover::after {
+            width: 100%;
+            transition: width .3s;
+        }
+        a {
+            text-decoration: none;
+            z-index: 5;
+        }
+    //End of Menu
+    
+    
+    //H1 Event Title, Event Date
+    .h1TitleEventDateDiv {
+        margin-top: 5%;
+        display:flex;
+        justify-content: center;
+        align-content: start;
+        flex-wrap: wrap;    
+    }
+    .mainEventTitle {
+        color: white;
+        font-family: variables.$font-text;
+        font-weight: 500;
+        font-size: 3.5vw;
+        letter-spacing: 0.1em;
+        word-spacing: 0.04em;
+        text-align: center;
+        margin-block-start: 1em;
+        margin-block-end: 0.1em;   
+        text-shadow: variables.$text-shadow-title;
+    }
+    .mainEventDate {
+        color: white;
+        font-family: variables.$font-text;
+        font-weight: 500;
+        font-size: 2vw;
+        letter-spacing: 0.1em;
+        word-spacing: 0.04em;
+        word-spacing: 0.04em;
+        text-align: center;
+        margin-block-start: 0.0em;
+        margin-block-end: 1em;
+        text-shadow: variables.$text-shadow-title;
+    }
+    //End of H1 Event Title, Event Date
+
+    //Event Descriptiom    
+    .mainEventDescription {
+        color: white;
+        font-family: variables.$font-text;
+        font-weight: 200;
+        font-size: 13pt;
+        letter-spacing: 0.1em;
+        word-spacing: 0.04em;
+        text-align: center;
+        margin-block-start: 1.0em;
+        margin-block-end: 0.8em;
+        text-shadow: variables.$text-shadow-text;
+    }
+
+    .mainEventCategory {
+        color: white;
+        font-family: variables.$font-text;
+        font-weight: 200;
+        font-size: 11pt;
+        letter-spacing: 0.1em;
+        word-spacing: 0.04em;
+        text-align: center;
+        margin-block-start: 0.0em;
+        margin-block-end: 3em;
+        text-shadow: variables.$text-shadow-text;
+    }
+        .mainEventCategory span {
+            font-weight: 400;
+        }
+    //End of Event Descriptiom    
+    
+    //Agenda
+    .mainEventAgendaWord {
+        color: white;
+        font-family: variables.$font-text;
+        font-weight: 500;
+        font-size: 20pt;
+        letter-spacing: 0.15em;
+        word-spacing: 0.2em;
+        margin-block-start: 0.0em;
+        margin-block-end: 0.5em;
+        text-shadow: variables.$text-shadow-title;
+    }
+    
+    .mainEventAgendaContainerDiv.two{
+        margin-top: 3em;
+    }
+        .mainEventDayLocationContainer {
+            display: flex;
+            justify-content: space-between;
+        }
+            .mainEventDay, .mainEventLocation {
+                color: white;
+                font-family: variables.$font-text;
+                font-weight: 500;
+                font-size: 12pt;
+                letter-spacing: 0.15em;
+                word-spacing: 0.2em;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+                text-shadow: variables.$text-shadow-text;
+            }
+
+        .mainEventLine {
+            border-bottom: 1px solid white;
+            opacity: 70%;
+        }
+
+        .mainEventDayOneContainer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-between;
+            margin-block-start: 0.5em;
+            row-gap: 10px;
+            column-gap: 20px;
+        }
+        .mainEventTime {
+            width: 50px;
+            color: white;
+            font-family: variables.$font-text;
+            font-weight: 500;
+            font-size: 10pt;
+            letter-spacing: 0.15em;
+            margin-right: 15px;
+            margin-left: 1px;
+            margin-block-start: 1.73em;
+            margin-block-end: 0em;
+            text-shadow: variables.$text-shadow-text;
+        }
+            .column {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 100%;
+                flex: 1;
+            }
+                .infoPlaceContainer {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                    .mainEventInfo {
+                        color: white;
+                        font-family: variables.$font-text;
+                        font-weight: 500;
+                        font-size: 11pt;
+                        letter-spacing: 0.15em;
+                        margin-block-start: 1.5em;
+                        margin-block-end: 0em;
+                        text-shadow: variables.$text-shadow-text;
+                    }
+                        .mainEventInfo span {
+                            font-weight: 200;
+                            font-style: italic;
+                        }
+    //End of Agenda
+    
+    //Images
+    .imagesContainerDiv {
+        margin-block-start: 2em;
+        margin-bottom: 350px;
+    }
+        .imageContainer {
+            width: 185px;
+            height: auto;
+            margin-top: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+        .imageContainer.four{
+            margin-right: 0px;
+        }   
+            .imageContainer img{
+                width: 100%;
+                height: 100%;
+                object-fit:cover;
+                border-radius: 25px;
+            }
+    //End of Images
+    
+//End of Agenda
+
+
+            
+                

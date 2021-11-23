@@ -1,0 +1,320 @@
+@use "variables";
+
+
+body {
+    background-color: variables.$backgroundColor;
+    margin-top: 0%;
+}
+
+
+    //Hero Images, Company name
+    .heroImageTextDiv {
+        height: 100%;
+        width:100%;
+        position: relative;
+    }
+        .heroHumansImage {
+            background: transparent !important;
+            background-color: transparent !important;
+            height: auto;
+            width: 43%;
+            z-index: 3;
+            position: absolute;
+            top:2%;
+            left:28.5%;
+        }
+
+        .heroSkyImageDiv {
+            width: 85%;
+            height: 85%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+            .heroSkyImageDiv img {
+                width: 100%;
+                height: 100%;
+            }
+
+        .up, .in, .the, .air {
+            font-family: variables.$font-title;
+            color: white;
+            position: absolute;
+            text-shadow: variables.$text-shadow-title;
+        }
+        .up{
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            font-size: 9.5vw;
+            top:0.3%;
+            left:21%;
+            z-index: 2;
+        }
+        .in{
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            font-size: 5.8vw;
+            top:7.5%;
+            left:36%;
+            z-index: 2;
+        }
+        .the{
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            font-size: 5.8vw;
+            top:0.3%;
+            left:44.8%;
+            z-index: 2;
+        }
+        .air{
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            font-size: 9.5vw;
+            top:0.3%;
+            left:58.7%;
+            z-index: 2;
+        }
+        .events {
+            font-family: variables.$font-text;
+            color: white;
+            font-size: 1.3vw;
+            font-weight: 500;
+            position: absolute;
+            top:45.2%;
+            left:76%;
+            z-index: 20;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            text-shadow: variables.$text-shadow-title;
+        }
+    //End of Hero Images, Company name
+
+
+    //Menu
+    .menuDiv {
+        margin-top: 35px;
+        display:flex;
+        justify-content: center;
+        align-content: center;
+        gap: 15px 30px;
+        flex-wrap: wrap;
+    }
+        .menuItems {
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+        }
+        .menuItems.active {
+            font-family: variables.$font-text;
+            color: white;
+            font-size: 12pt;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            cursor: pointer;
+            text-shadow: variables.$text-shadow-title;
+        }
+        .menuItems.inactive {
+            font-family: variables.$font-text;
+            color: white;
+            font-size: 12pt;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            cursor:default;
+            text-shadow: variables.$text-shadow-title;
+        }
+        .menuItems.active::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 1px;
+            background: white;
+            transition: width .3s;
+        }
+        .menuItems.active:hover::after {
+            width: 100%;
+            transition: width .3s;
+        }
+        a {
+            text-decoration: none;
+            z-index: 5;
+        }
+    //End of Menu
+
+    //H1 Title
+    .h1TitleDiv {
+        height: auto;
+        height:auto;
+        text-align: center;
+        margin-top: 50px;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+        .h1Title {
+            color: white;
+            font-family: variables.$font-title;
+            font-size: 5.5vw;
+            letter-spacing: 0.2em;
+            word-spacing: 0.3em;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            width: 100%;
+            height: 100%;
+            text-shadow: variables.$text-shadow-title;
+        }
+    //End of H1 Title
+    
+
+    //Events
+    .allEventsContainerDiv {
+        margin-top: 30px;
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px 40px;
+        padding-left: 20%;
+        padding-right: 20%;
+        margin-bottom: 100px;
+    }
+        .event {
+            display: block;
+            width:230px;
+            height:auto;
+            margin-bottom:25px;
+        }
+            .eventImageDiv {
+                width:230px;
+                height:auto;
+            }
+                .eventImage {
+                    width:100%;
+                    height:100%;
+                    object-fit:cover;
+                    border-radius: 25px;
+                    box-shadow: variables.$event-image-box-shadow;
+                }
+
+            .eventTitle {
+                color: white;
+                font-family: variables.$font-text;
+                font-weight: 600;
+                letter-spacing: 0.2em;
+                margin-left: 5px;
+                margin-block-start: 0.5em;
+                margin-block-end:1em;
+                width: 230px;
+                text-shadow: variables.$text-shadow-title;
+            }
+
+            .moreInfoDateDiv {
+                display: block;
+                justify-content: space-between;
+                position: relative;
+                width: 230px;
+                overflow: auto;
+                padding-left: 5px;
+                padding-right: 5px;
+                position: relative;
+            }
+            .moreInfo {
+                    color: white;
+                    font-family: variables.$font-text;
+                    font-weight: 500;
+                    letter-spacing: 0.1em;
+                    font-size: 10pt;
+                    margin-block-start: 0em;
+                    margin-block-end:0em;
+                    cursor: pointer;
+                    text-shadow: variables.$text-shadow-text;
+                }
+                .moreInfo:hover {
+                    font-size: 11pt;
+                }
+                
+            .eventDate {
+                color: white;
+                font-family: variables.$font-text;
+                font-weight: 400;
+                letter-spacing: 0.1em;
+                font-size: 10pt;
+                position: absolute;
+                left: 130px;
+                top: -14px;
+                width: 115px;
+                text-shadow: variables.$text-shadow-text;
+            }
+                .eventDate.fintechEvent {
+                    left: 110px;
+                }
+
+            .eventInfo {
+                color: white;
+                font-family: variables.$font-text;
+                font-weight: 200;
+                letter-spacing: 0.1em;
+                font-size: 10pt;
+                margin-block-start: 0.5em;
+                margin-block-end:0em;
+                margin-left: 0px;
+                width: 230px;
+                text-shadow: variables.$text-shadow-text;
+            }
+
+            .eventHr {
+                border-bottom: 1px solid white;
+                opacity: 70%;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                width: 230px;
+            }
+
+            .eventCategoryLinkToEventDiv {
+                margin-left: 5px;
+            }
+                .eventCategory {
+                    color: white;
+                    font-family: variables.$font-text;
+                    font-weight: 200;
+                    letter-spacing: 0.1em;
+                    font-size: 10pt;
+                    margin-block-start: 0.5em;
+                    margin-block-end:0em;
+                    margin-left: 5px;
+                    width: 230px;
+                    text-shadow: variables.$text-shadow-text;
+                }
+                    .eventCategory > span {
+                        color: white;
+                        font-weight: 400;
+                        letter-spacing: 0.1em;
+                        font-size: 10pt;
+                        margin-block-start: 0.5em;
+                        margin-block-end:0em;
+                    }
+
+                .linkToEvent {
+                    color: white;
+                    font-family: variables.$font-text;
+                    font-weight: 600;
+                    letter-spacing: 0.1em;
+                    font-size: 10pt;
+                    text-shadow: variables.$text-shadow-text;
+                    margin-block-start: 0.5em;
+                    margin-block-end:0em;
+                    margin-left: 5px;
+                    cursor:pointer;
+                    width: 225px;
+                    margin-right: 0px;
+                }
+                    .linkToEvent::after {
+                        content: "";
+                        display: block;
+                        width: 0;
+                        height: 1px;
+                        background: white;
+                        transition: width .3s;
+                    }
+                    .linkToEvent:hover::after {
+                        width: 46%;
+                        transition: width .3s;
+                    }
+    //End of Events
+
+//End of index CSS

@@ -1,0 +1,379 @@
+@use "variables";
+
+// @font-face { font-family: Hobo Std; src: resources/('HoboStd.otf'); } 
+
+
+body {
+    background-color: variables.$backgroundColor;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+    //Hero Images, Company name (commented out; must be visible only on home page)
+    .heroImageTextDiv {
+        height: 100%;
+        width:100%;
+        position: relative;
+    }
+        .heroHumansImage {
+            background: transparent !important;
+            background-color: transparent !important;
+            height: auto;
+            width: 43%;
+            z-index: 3;
+            position: absolute;
+            top:2%;
+            left:28.5%;
+        }
+
+        .heroSkyImageDiv {
+            width: 85%;
+            height: 85%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+            .heroSkyImageDiv img {
+                width: 100%;
+                height: 100%;
+            }
+
+        .up, .in, .the, .air {
+            font-family: variables.$font-title;
+            color: white;
+            position: absolute;
+            text-shadow: variables.$text-shadow-title;
+        }
+        .up{
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            font-size: 9.5vw;
+            top:0.3%;
+            left:21%;
+            z-index: 2;
+        }
+        .in{
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            font-size: 5.8vw;
+            top:7.5%;
+            left:36%;
+            z-index: 2;
+        }
+        .the{
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            font-size: 5.8vw;
+            top:0.3%;
+            left:44.8%;
+            z-index: 2;
+        }
+        .air{
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            font-size: 9.5vw;
+            top:0.3%;
+            left:58.7%;
+            z-index: 2;
+        }
+        .events {
+            font-family: variables.$font-text;
+            color: white;
+            font-size: 1.3vw;
+            font-weight: 500;
+            position: absolute;
+            top:45.2%;
+            left:76%;
+            z-index: 20;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            text-shadow: variables.$text-shadow-title;
+        }
+    //End of Hero Images, Company name
+
+    //Menu
+    .menuDiv {
+        margin-top: 5%;
+        display:flex;
+        justify-content: center;
+        align-content: center;
+        gap: 15px 30px;
+        flex-wrap: wrap;
+    }
+        .menuItems {
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+        }
+        .menuItems.active {
+            font-family: variables.$font-text;
+            color: white;
+            font-size: 12pt;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            cursor: pointer;
+            text-shadow: variables.$text-shadow-title;
+        }
+        .menuItems.inactive {
+            font-family: variables.$font-text;
+            color: white;
+            font-size: 12pt;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            cursor:default;
+            text-shadow: variables.$text-shadow-title;
+        }
+        .menuItems.active::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 1px;
+            background: white;
+            transition: width .3s;
+        }
+        .menuItems.active:hover::after {
+            width: 100%;
+            transition: width .3s;
+        }
+        a {
+            text-decoration: none;
+            z-index: 5;
+        }
+    //End of Menu
+    
+
+    //Wrapper Div used by About Us, Our Founder, Our Team sections
+    .wrapper.aboutUs, .wrapper.ourFounder, .wrapper.ourTeam {
+        margin-left: 20%;
+        margin-right: 20%;
+        display: flex;
+        align-content: flex-start;
+    }
+        
+    //About Us
+    .h1AboutUsContainer {
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+        .h1AboutUsTitle, .h2OurFounderTitle, .h2OurTeamTitle {
+            color: white;
+            font-family: variables.$font-title;
+            font-size: 37pt;
+            letter-spacing: 0.1em;
+            word-spacing: 0.3em;
+            text-shadow: variables.$text-shadow-text;
+
+            margin-block-start: 0.1em;
+            margin-block-end: 0em;
+            width: 100%;
+        }
+            .h1AboutUsTitle{
+                margin-bottom: 7px;
+            }
+        .h1AboutUsParagraph, .h2OurFounderParagraph, .h2OurTeamParagraph {
+            color: white;
+            font-family: variables.$font-text;
+            font-size: 10.5pt;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            word-spacing: 0.05em;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            text-shadow: variables.$text-shadow-text;
+        }
+    //End of About Us
+    
+    
+    //Our Founder
+    .h2OurFounderContainer {
+        margin-bottom: 70px;
+    }
+        .OurFounderParagraphLinksPhotoContainer {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            justify-content: space-between;
+            align-content: space-between;
+            margin-top: 7px;
+            align-self: start;
+        }
+            .OurFounderParagraphLinksContainer {
+                width: 60%;
+                align-self: start;
+                flex-grow: 2;
+            }
+                    .founderPhoneNumber, .founderEmail {
+                        color: white;
+                        font-family: variables.$font-text;
+                        font-size: 10.5pt;
+                        font-weight: 300;
+                        letter-spacing: 0.2em;
+                        word-spacing: 0.05em;
+                        text-shadow: variables.$text-shadow-text;
+                    }
+                    .founderPhoneNumber {
+                        margin-block-start: 1em;
+                        margin-block-end: 0.3em;
+                    }
+                    .founderEmail {
+                        margin-block-start: 0em;
+                        margin-block-end: 0em;
+                    }
+                    .founderPhoneNumber span, .founderEmail span {
+                        font-weight: 600;
+                    }
+                    .founderPhoneNumber a, .founderEmail a {
+                        color: white;
+                    }
+                    
+            .OurFounderPhotoContainer {
+                width: 300px;
+                height: auto;
+                align-self: start;
+                margin-left: 25px;
+                margin-bottom: 10px;
+            }
+                .OurFounderPhotoContainer img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 25px;
+                    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+                }
+    //End of Our Founder
+    
+
+    //Our Team
+    .h2OurTeamParagraph {
+        margin-top: 7px;   
+    }
+    .h2OurTeamImageContainer {
+        width:auto;
+        height: auto;
+        margin-top: 20px;
+    }
+        .h2OurTeamImageContainer img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        }  
+    //End of Our Team
+    
+
+    //Contact Us Form
+    .contactUsFormWrapper {
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom: 10%;
+    }
+    .formContainer {
+        margin-top: 70px;
+    }
+        .h2ContactUsTitle {
+            color: white;
+            font-family: variables.$font-title;
+            font-size: 27pt;
+            letter-spacing: 0.1em;
+            word-spacing: 0.3em;
+            text-shadow: variables.$text-shadow-text;
+
+            margin-block-start: 0.1em;
+            margin-bottom: 0px;
+            width: 100%;
+        }
+        .formNameEmailContainer {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+            .formNameContainer, .formEmailContainer {
+                width:320px;
+                margin-top: 15px;
+            }
+                .formNameContainer label, .formEmailContainer label, .aboutUsFormMessageContainer label {
+                    color: white;
+                    font-family: variables.$font-text;
+                    font-size: 12pt;
+                    font-weight: 500;
+                    letter-spacing: 0.1em;
+                    text-shadow: variables.$text-shadow-text;
+                }
+                input {
+                    margin-top: 5px;
+                    padding-top: 0px;
+                }
+                input:focus {
+                    outline: none;
+                }
+
+                .formName, .formEmail, .aboutUsFormMessage {
+                    background-color: transparent;
+                    border-radius: 5px;
+                    border: white solid 1px;
+                    width: 100%;
+                    padding: 8px;
+
+                    color: white;
+                    font-family: variables.$font-text;
+                    font-size: 10pt;
+                    font-weight: 300;
+                    letter-spacing: 0.1em;
+                }
+        
+        .aboutUsFormMessageContainer {
+            margin-top: 30px;
+        }
+            .aboutUsFormMessage {
+                height: 70px;
+            }
+            textarea:focus {
+                outline: none;
+            }
+
+        .formSubmitButton {
+            margin-top: 30px;
+        }
+            .submitButton {
+                color: white;
+                font-family: variables.$font-text;
+                letter-spacing: 0.1em;
+                text-shadow: 1px 1px 0px rgba(70, 69, 69, 0.2);
+                border: white solid 1px;
+                background: none;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 40px;
+                padding-right: 40px;
+                border-radius: 5px;
+                text-shadow: variables.$text-shadow-text;
+            }
+            .submitButton:hover {
+                background-color: white;
+                color: rgb(75, 74, 74);
+                text-shadow: none;
+            }
+        
+
+    //"Thank You" message
+    .formThankYouMessage {
+        text-align: center;
+        display: none;
+        color: white;
+        font-family: variables.$font-text;
+        font-size: 15pt;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-shadow: variables.$text-shadow-text;
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+    .formMessage {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    } 
+
+    //End of Contact Us Form
+    
+
+//End of about-us page
+            
+                
